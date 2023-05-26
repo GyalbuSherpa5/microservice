@@ -4,6 +4,7 @@ import com.userservice.dto.UserResponse;
 import com.userservice.model.User;
 import com.userservice.service.UserService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ public class UserController {
 
     @GetMapping("/users/{id}")
     @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+    @RateLimiter(name = "userRateLimiter", fallbackMethod = "ratingHotelFallback")
     public ResponseEntity<UserResponse> getUserById(@PathVariable Long id) {
         return new ResponseEntity<>(userService.getUserById(id),HttpStatus.OK);
     }
