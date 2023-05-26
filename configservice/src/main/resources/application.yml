@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GyalbuSherpa5/hotel-review-microservice-server-config
+          clone-on-start: true
