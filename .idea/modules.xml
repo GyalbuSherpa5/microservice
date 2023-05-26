@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apigatewayservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apigatewayservice.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/hotelreviewmicroservice.iml" filepath="$PROJECT_DIR$/hotelreviewmicroservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotelservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hotelservice.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratingservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ratingservice.main.iml" />
