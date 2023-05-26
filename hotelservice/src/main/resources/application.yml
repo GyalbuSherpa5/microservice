@@ -1,6 +1,6 @@
 spring:
   config:
-    import: optional:configserver:http://localhost:8085
+    import: configserver:http://localhost:8085
 
   datasource:
     url: jdbc:postgresql://localhost:5432/hotelservice
