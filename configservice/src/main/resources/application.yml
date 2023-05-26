@@ -20,3 +20,4 @@ spring:
         git:
           uri: https://github.com/GyalbuSherpa5/hotel-review-microservice-server-config
           clone-on-start: true
+          default-label: master
